@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  var value = parseInt(prompt("Введите общую сумму потраченных денег(грн): ", 0));
+  var discount = 2, discount2 = 5, discount3 = 8, discount4 = 10;
+  	if (value<0) {
+    	alert("Такое значение недопустимо! Пожалуйста, перезагрузите страницу и введите верное значение.");
+    }
+   else if (value<=1000) {
+    	alert("Покупателю полагается скидка: " + discount + "%");
+    }
+   else if (value>1000&&value<=3000) {
+    	alert("Покупателю полагается скидка: " + discount2 + "%");
+    }
+  else if (value>3000&&value<=10000) {
+    	alert("Покупателю полагается скидка: " + discount3 + "%");
+    }
+    else if (value>10000) {
+    	alert("Покупателю полагается скидка: " + discount4 + "%");
+    }
+  var value2 = parseInt(prompt("Введите сумму данной покупки(грн): ", 0));
+  if (value2<0) {
+     alert("Такое значение недопустимо! Пожалуйста, перезагрузите страницу и введите верное значение.");
+  }
+  var sum;
+  if (value<=1000) {
+  	sum = value2 - (value2*(discount/100));
+  	alert("Учитывая вашу скидку, стоимость покупки - " + sum + "грн");
+  }
+  else if (value>1000&&value<=3000) {
+  	sum = value2 - (value2*(discount2/100));
+  	alert("Учитывая вашу скидку, стоимость покупки - " + sum + "грн");
+  }
+  else if (value>3000&&value<=10000) {
+  	sum = value2 - (value2*(discount3/100));
+ 	alert("Учитывая вашу скидку, стоимость покупки - " + sum + "грн");
+  }
+  else if (value>10000) {
+  	sum = value2 - (value2*(discount4/100));
+  	alert("Учитывая вашу скидку, стоимость покупки - " + sum + "грн");
+  }
+</script>
+</body>
+</html>
