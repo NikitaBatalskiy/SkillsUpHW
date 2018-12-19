@@ -4,29 +4,23 @@
 </head>
 <body>
 <script>
-      var password = "Passw0rd!", k = 4;
+      var password = "Passw0rd!", attempts = 4;
       var userInput = prompt("Enter your password", "");
-      // while(userInput !== password) {
-      // 	userInput = prompt("Your password is incorrect, try again", "");
-      // }
       for (var i = 0; i < 4; i++) {
-     	if (userInput!==password) {
-     		userInput = prompt("Your password is incorrect, try again. You have " + k + " chanse(s) lasted ", "");
-     		k--;
-     		if (userInput==null) {
+     	if (userInput !== password) {
+     		userInput = prompt("Your password is incorrect, try again. You have " + attempts + " chanse(s) lasted ", "");
+     		attempts--;
+     		if (userInput == null) {
      			break;
      		}
-     		if (k==0) {
-     			n = prompt("Try later.");
-     			if (n==null) {
-     				alert("Acess denied!");
-     			}
+     		if (attempts === 0) {
+     			alert("Try later.");
      		}
      	}
-     	else if (userInput==password) {     
+     	else if (userInput == password) {     
      		alert("You successfully logged in!");
      		break;
-		}
+		    }
       }
     </script>
 </body>
