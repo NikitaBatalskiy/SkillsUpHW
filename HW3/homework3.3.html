@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var text = prompt("Введите какой-либо текст:");
+	var maxLength = parseFloat(prompt("Введите размер выводимого текста:", 0));
+function newText(text, maxlength) {
+	if (text.length > maxLength) {
+		alert(text.slice(0, maxLength - 3) + '...');
+	}
+	else {
+		alert(text);
+	}
+}
+newText(text, maxLength);
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var email = prompt("Enter yor email");
+	var dogIndex1 = email.indexOf("@");
+	var dogIndex2 = email.lastIndexOf("@");
+	var firstPart = email.substring(0, dogIndex1);
+	var secondPart = email.substring(dogIndex1);
+	var pointIndex = secondPart.indexOf(".");
+	if( dogIndex1 != dogIndex2 || dogIndex1 == 0 || dogIndex1 === -1 || pointIndex === -1 || pointIndex < 2){ 
+		alert("Email [X] невалидный!");
+	}
+	else alert("Email [X] является валидным");
+</script>
+</body>
+</html>

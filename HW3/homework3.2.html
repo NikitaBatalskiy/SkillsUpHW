@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var email = prompt("Ввдите ваш email: ");
+	var dogIndex = email.indexOf('@');
+	var firstPart = email.substring(0, dogIndex);
+	var secondPart = email.substring(dogIndex);
+	var hidenEmail = "";
+	for (var i = 0; i < firstPart.length; i++) {
+		hidenEmail += "*";
+	}
+	alert(hidenEmail + secondPart);
+</script>
+</body>
+</html>

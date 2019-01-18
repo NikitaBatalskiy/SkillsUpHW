@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var randomNumber = Math.floor(Math.random() * 100 + 0); 
+	alert(randomNumber);
+	var userInput = prompt("Число от 0 до 100 сгенерировано, попробуйте угадать его: ", 0);
+
+	while (userInput != randomNumber) {
+		if (userInput > randomNumber){
+		userInput =	prompt("Загаданное число меньше, чем вы думаете, попробуйте еще: ");
+		}
+		else if (userInput < randomNumber) {
+			userInput =prompt("Загаданное число больше, чем вы думаете, попробуйте еще: ");
+		}
+	}
+	alert("Поздравляю! Вы угадали число! ");
+</script>
+</body>
+</html>
