@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.img {
+			width: 700px;
+			height: 500px;
+			margin-left: 400px;
+		}
+	</style>
+</head>
+<body>
+<img src="1.jpg" class="img" id="src" onmouseenter="hoverOnImg()" onmouseleave="hoverOffImg()">
+<script>
+	function hoverOnImg(event) {
+		var newImg = document.getElementById("src");
+		newImg.src = "2.jpg";
+	}
+	function hoverOffImg() {
+		var newImg = document.getElementById("src");
+		newImg.src = "1.jpg";
+	}
+</script>
+</body>
+</html>

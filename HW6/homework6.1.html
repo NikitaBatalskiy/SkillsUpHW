@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<p id="psh" onclick="click()">dkfadkfnalnlsnglansgklsan</p>
+	<ul>
+		<li onclick="click()">HomeWork</li>
+		<li onclick="click()">ExamWork</li>
+		<li onclick="click()">ControlWork</li>
+		<li onclick="click()">ModalWork</li>
+		<li onclick="click()">SomeWork</li>
+	</ul>
+	<script>
+	function click() {
+		var p = document.getElementByTag("psh");
+		p.onclick = function haha() {
+		p.style.textDecoration = "line-through";
+		}
+		var li = document.getElementByTag("li");
+		li.onclick = function crosline(){
+			li.style.textDecoration = "line-through";
+		};
+	}
+	</script>
+</body>
+</html>
