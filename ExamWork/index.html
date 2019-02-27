@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.div1 {
+		width: 600px;
+		height: 200px;
+		margin: 0 auto;
+	}
+
+	.inputForTasks {
+		width: 400px;
+		height: 30px;
+	}
+
+	.button1 {
+		height: 36px;
+	}
+
+	.select {
+		height: 36px;
+	}
+/*	тщетные попытки красивой стилизации))
+*/	.deleteButtonCritical {
+		position: relative;
+		margin-left: 370px;
+		background-color: white;
+		border: 0;
+	}
+
+	.deleteButtonMajor {
+		position: relative;
+		margin-left: 370px;
+		background-color: white;
+		border: 0;
+	}
+
+	.deleteButtonMinor {
+		position: relative;
+		margin-left: 370px;
+		background-color: white;
+		border: 0;
+	}
+
+	.deleteButtonTrivial {
+		position: relative;
+		margin-left: 370px;
+		background-color: white;
+		border: 0;
+	}
+	</style>
+</head>
+<body>
+<div class="div1">
+<h1 align="center">Список задач</h1>
+<input type="text" id="task" class="inputForTasks" placeholder="Task">
+<select class="select" id="select">
+	<option value="Critical" selected="selected">Critical</option>
+	<option value="Major">Major</option>
+	<option value="Minor">Minor</option>
+	<option value="Trivial">Trivial</option>
+</select>
+<button id="button" onclick="addNewTask()" class="button1">Add new Task</button>
+<div id="tasksContainer" class="div2"></div>
+<div id="Critical"></div>
+<div id="Major"></div>
+<div id="Minor"></div>
+<div id="Trivial"></div>
+</div>
+<script>
+	function addNewTask(){
+		var criticalsContainer = document.getElementById("Critical");
+		var majorsContainer = document.getElementById("Major");
+		var minorsContainer = document.getElementById("Minor");
+		var trivialsContainer = document.getElementById("Trivial");
+		var task = document.getElementById("task").value;
+		var newTask = document.createElement("div");		
+		newTask.onclick = function crossLine() {
+			newTask.style.textDecoration = "line-through"; 
+		};
+		var deleteTaskButton = document.createElement("input");
+		deleteTaskButton.type = "button";
+		deleteTaskButton.value = "X";
+		deleteTaskButton.onclick = function deleteTask() {
+			newTask.remove();
+		};
+		var select = document.getElementById("select");
+		if (select.value == "Critical") {
+		newTask.id = "Critical";
+		newTask.innerHTML = select.value + " " + task;	
+		newTask.appendChild(deleteTaskButton);
+		criticalsContainer.appendChild(newTask);
+		deleteTaskButton.className = "deleteButtonCritical";
+		}
+		if (select.value == "Major") {
+		newTask.innerHTML = select.value + " " + task;
+		newTask.id = "Major";
+		newTask.appendChild(deleteTaskButton);
+		majorsContainer.appendChild(newTask);
+		deleteTaskButton.className = "deleteButtonMajor";
+		}
+		if (select.value == "Minor") {
+		newTask.id = "Minor";
+		newTask.innerHTML = select.value + " " + task;
+		newTask.appendChild(deleteTaskButton);
+		minorsContainer.appendChild(newTask);
+		deleteTaskButton.className = "deleteButtonMinor";
+		}
+		if (select.value == "Trivial") {
+		newTask.id = "Trivial"
+		newTask.innerHTML = select.value + " " + task;
+		newTask.appendChild(deleteTaskButton);
+		trivialsContainer.appendChild(newTask);
+		deleteTaskButton.className = "deleteButtonTrivial";
+		}
+	}
+</script>
+</body>
+</html>
