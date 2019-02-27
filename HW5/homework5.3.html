@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input placeholder="Input number, plz" id="input">
+<button onclick="checkInput()">Send</button>
+<script>
+	function checkInput() {
+		var inputValue = parseFloat(document.getElementById("input").value);
+		
+		if (!inputValue) {
+			document.getElementById("input").style.background = "gray";
+		} else {
+			if (inputValue >= 0 && inputValue <= 100) {
+				document.getElementById("input").style.background = "green";
+			} else {
+				document.getElementById("input").style.background = "red";
+			}
+		}
+
+		
+	}
+</script>
+</body>
+</html>
