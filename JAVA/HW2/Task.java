@@ -85,11 +85,11 @@ public class Task {
         double numberOfRandom = (int) (Math.random() * 19) + 1;
         System.out.println(numberOfRandom);
         int number = scan.nextInt();
-        if (number == numberOfRandom) System.out.println("Congrats! You have won!");
-        else {
-            System.out.println("Not this time!");
-            lotery();
+        while (number != numberOfRandom) {
+            System.out.println("Not this time! Try again.");
+            number = scan.nextInt();
         }
+        System.out.println("Congrats! You have won!");
         System.out.println();
         System.out.println();
     }
@@ -102,11 +102,9 @@ public class Task {
         System.out.println("b: ");
         int b = scan.nextInt();
         System.out.println("Niechet: ");
-        for (int i = 0; a <= b; i++) {
-            if (a % 2 != 0) {
-                System.out.println(a);
-                a++;
-            } else a++;
+        while (a<=b){
+            if (a % 2 != 0) System.out.println(a);
+            a++;
         }
         System.out.println();
         System.out.println();
@@ -120,11 +118,9 @@ public class Task {
         System.out.println("b: ");
         int b = scan.nextInt();
         System.out.println("Chiet: ");
-        for (int i = 0; a <= b; i++) {
-            if (a % 2 == 0) {
-                System.out.println(a);
-                a++;
-            } else a++;
+        while (a<=b) {
+            if (a % 2 == 0) System.out.println(a);
+            a++;
         }
         System.out.println();
         System.out.println();
