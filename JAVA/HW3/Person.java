@@ -3,16 +3,16 @@ package HW3;
 import java.util.Objects;
 
 public class Person {
-    String  Name;
-    String LastName;
-    String Status;
-    String PhoneNumber;
+   private String  name;
+   private String lastName;
+   private String status;
+   private String phoneNumber;
 
     public Person(String name, String lastName, String status, String phoneNumber) {
-        Name = name;
-        LastName = lastName;
-        Status = status;
-        PhoneNumber = phoneNumber;
+        this.name = name;
+        this.lastName = lastName;
+        this.status = status;
+        this.phoneNumber = phoneNumber;
     }
 
     public Person() {
@@ -20,35 +20,35 @@ public class Person {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -56,24 +56,24 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return Objects.equals(Name, person.Name) &&
-                Objects.equals(LastName, person.LastName) &&
-                Objects.equals(Status, person.Status) &&
-                Objects.equals(PhoneNumber, person.PhoneNumber);
+        return Objects.equals(name, person.name) &&
+                Objects.equals(lastName, person.lastName) &&
+                Objects.equals(status, person.status) &&
+                Objects.equals(phoneNumber, person.phoneNumber);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Name, LastName, Status, PhoneNumber);
+        return Objects.hash(name, lastName, status, phoneNumber);
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "Name='" + Name + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", Status='" + Status + '\'' +
-                ", PhoneNumber='" + PhoneNumber + '\'' +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", status='" + status + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 }
