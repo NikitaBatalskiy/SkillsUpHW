@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Введите сумму в гривнах, которую вы готовы потратить у нас: ");
+        System.out.printf("Введите сумму в гривнах, которую Bы готовы потратить у нас: ");
         int amountOfUsersMoney = scanner.nextInt();
         System.out.println();
-        int MinPrice = (int) Math.random()*2000 + 8000;
+        int MinPrice = (int) (Math.random()*2000) + 8000;
         System.out.println("Минимальная стоимость продукта у нас такова: " + MinPrice);
         System.out.println();
         try {
